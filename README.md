@@ -150,7 +150,7 @@ employee.exe
 ---
 
 📁 Project Structure
-
+```
 C-Programming-Practical/
 │
 ├── students.c
@@ -158,7 +158,7 @@ C-Programming-Practical/
 ├── employee.c
 └── README.md
 
-
+```
 ---
 
 🎯 Learning Objectives
