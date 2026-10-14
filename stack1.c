@@ -90,4 +90,3 @@ int main() {
 
     return 0;
 }
-The stack follows **LIFO (Last In, First Out)**.
