@@ -1,48 +1,57 @@
 #include <stdio.h>
 #define MAX 5
-
-int stack[MAX];
+int a[MAX];
 int top = -1;
 
 // Push operation
-void push() {
+void push() 
+{
     int value;
 
-    if (top == MAX - 1) {
+    if (top == MAX - 1) 
+    {
         printf("Stack Overflow!\n");
-    } else {
+    }
+    else 
+    {
         printf("Enter value: ");
         scanf("%d", &value);
-        stack[++top] = value;
+        top++;
+        a[top]=val;
         printf("%d pushed into stack.\n", value);
     }
 }
-
-// Pop operation
-void pop() {
-    if (top == -1) {
+void pop()
+{
+    if (top == -1)
+    {
         printf("Stack Underflow!\n");
-    } else {
-        printf("%d popped from stack.\n", stack[top--]);
+    } 
+    else 
+    {
+        printf("%d popped from stack.\n", a[top]);
+        top--;
     }
 }
-
-// Peek operation
-void peek() {
+void peek()
+{
     if (top == -1) {
         printf("Stack is empty.\n");
-    } else {
-        printf("Top element is: %d\n", stack[top]);
+    }
+    else 
+    {
+        printf("Top element is: %d\n", a[top]);
     }
 }
-
-// Display operation
-void display() {
+void display()
+{
     int i;
 
     if (top == -1) {
         printf("Stack is empty.\n");
-    } else {
+    } 
+    else
+    {
         printf("Stack elements are:\n");
         for (i = top; i >= 0; i--) {
             printf("%d\n", stack[i]);
@@ -50,10 +59,12 @@ void display() {
     }
 }
 
-int main() {
+int main()
+{
     int choice;
 
-    while (1) {
+    while (1)
+        {
         printf("\n--- STACK OPERATIONS ---\n");
         printf("1. Push\n");
         printf("2. Pop\n");
